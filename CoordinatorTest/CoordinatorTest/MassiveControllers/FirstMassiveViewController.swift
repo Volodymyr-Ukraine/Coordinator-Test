@@ -12,13 +12,18 @@ protocol CanDo {
     var toDo: (()->())? {get set}
 }
 
-class FirstMassiveViewController: UIViewController, CanDo {
+enum FirstEvent{
+    case toDo(String?)
+}
+
+class FirstMassiveViewController: UIViewController {
     
     // MARK: -
     // MARK: Properties
     
     private weak var button: UIButton? = nil
-    public var toDo: (()->())? = nil
+    public var eventHandler: ((FirstEvent)->())?
+    private var textButton: String = "First"
     
     // MARK: -
     // MARK: Init and Deinit
@@ -26,8 +31,10 @@ class FirstMassiveViewController: UIViewController, CanDo {
     override func viewDidLoad() {
         super.viewDidLoad()
         let but = UIButton(frame: self.view.bounds)
-        let label = UILabel(frame: but.frame)
-        label.text = "First"
+        but.setTitle(self.textButton, for: .normal)
+        but.tintColor = .black
+        but.titleLabel?.textColor = .black
+        but.setTitleColor(.black, for: .normal)
         self.button = but
         but.backgroundColor = .yellow
         but.addTarget(self, action: #selector(buttonPressed(sender:)), for: .touchDown)
@@ -37,10 +44,16 @@ class FirstMassiveViewController: UIViewController, CanDo {
     // MARK: -
     // MARK: Methods
     
+    public func setText(text: String?) {
+        let t = text
+        let s = self.textButton
+        self.textButton = (t ?? "") + (s ?? "" )
+        self.button?.setTitle(self.textButton, for: .normal)
+    }
+    
     @objc private func buttonPressed(sender: UIButton) {
-        if let realyDo = toDo {
-            realyDo()
-        }
+        self.eventHandler?(.toDo(self.button?.titleLabel?.text))
+        
     }
     
 }

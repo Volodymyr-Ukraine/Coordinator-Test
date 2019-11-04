@@ -15,6 +15,8 @@
 		F5BD1624236F310A00C17DFF /* FirstMassiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BD1623236F310A00C17DFF /* FirstMassiveViewController.swift */; };
 		F5BD1626236F312800C17DFF /* SecondMassiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BD1625236F312800C17DFF /* SecondMassiveViewController.swift */; };
 		F5BD1628236F332F00C17DFF /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BD1627236F332F00C17DFF /* Coordinator.swift */; };
+		F5BD162A236F523500C17DFF /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BD1629236F523500C17DFF /* AppCoordinator.swift */; };
+		F5BD162C236F527800C17DFF /* AppConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BD162B236F527800C17DFF /* AppConfigurator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		F5BD1623236F310A00C17DFF /* FirstMassiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstMassiveViewController.swift; sourceTree = "<group>"; };
 		F5BD1625236F312800C17DFF /* SecondMassiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondMassiveViewController.swift; sourceTree = "<group>"; };
 		F5BD1627236F332F00C17DFF /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		F5BD1629236F523500C17DFF /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		F5BD162B236F527800C17DFF /* AppConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigurator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				F5BD1610236F30C500C17DFF /* AppDelegate.swift */,
-				F5BD1627236F332F00C17DFF /* Coordinator.swift */,
+				F5BD162D236F529D00C17DFF /* Coordinator */,
 				F5BD1622236F30ED00C17DFF /* MassiveControllers */,
 				F5BD1612236F30C500C17DFF /* ViewController.swift */,
 				F5BD1614236F30C500C17DFF /* Main.storyboard */,
@@ -79,6 +83,16 @@
 				F5BD1625236F312800C17DFF /* SecondMassiveViewController.swift */,
 			);
 			path = MassiveControllers;
+			sourceTree = "<group>";
+		};
+		F5BD162D236F529D00C17DFF /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				F5BD1629236F523500C17DFF /* AppCoordinator.swift */,
+				F5BD162B236F527800C17DFF /* AppConfigurator.swift */,
+				F5BD1627236F332F00C17DFF /* Coordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +166,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5BD162C236F527800C17DFF /* AppConfigurator.swift in Sources */,
+				F5BD162A236F523500C17DFF /* AppCoordinator.swift in Sources */,
 				F5BD1624236F310A00C17DFF /* FirstMassiveViewController.swift in Sources */,
 				F5BD1626236F312800C17DFF /* SecondMassiveViewController.swift in Sources */,
 				F5BD1628236F332F00C17DFF /* Coordinator.swift in Sources */,
